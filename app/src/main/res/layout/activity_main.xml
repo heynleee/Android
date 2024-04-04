@@ -1,102 +1,131 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="10dp"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
+    <!-- 상단 TextView -->
+    <TableRow>
+        <TextView
+            android:layout_span="5"
+            android:text="202233262 이혜연"
+            android:textSize="14sp"
+            />
+    </TableRow>
+
+    <!-- EditText 위젯 2개 -->
     <TableRow>
         <EditText
             android:id="@+id/Edit1"
             android:layout_span="5"
             android:hint="숫자 1 입력"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            />
     </TableRow>
     <TableRow>
         <EditText
             android:id="@+id/Edit2"
             android:layout_span="5"
             android:hint="숫자 2 입력"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            />
     </TableRow>
 
-    <!-- 숫자 버튼을 2행 5열로 배치 -->
+    <!-- 숫자 버튼 10개 -->
     <TableRow>
         <Button
             android:id="@+id/BtnNum0"
-            android:text="0"/>
+            android:text="0"
+          />
         <Button
             android:id="@+id/BtnNum1"
-            android:text="1"/>
+            android:text="1"
+            />
         <Button
             android:id="@+id/BtnNum2"
-            android:text="2"/>
+            android:text="2"
+         />
         <Button
             android:id="@+id/BtnNum3"
-            android:text="3"/>
+            android:text="3"
+            />
         <Button
             android:id="@+id/BtnNum4"
-            android:text="4"/>
+            android:text="4"
+            />
     </TableRow>
     <TableRow>
         <Button
             android:id="@+id/BtnNum5"
-            android:text="5"/>
+            android:text="5"
+            />
         <Button
             android:id="@+id/BtnNum6"
-            android:text="6"/>
+            android:text="6"
+            />
         <Button
             android:id="@+id/BtnNum7"
-            android:text="7"/>
+            android:text="7"
+           />
         <Button
             android:id="@+id/BtnNum8"
-            android:text="8"/>
+            android:text="8"
+        />
         <Button
             android:id="@+id/BtnNum9"
-            android:text="9"/>
+            android:text="9"
+         />
     </TableRow>
 
-    <!-- 사칙연산 버튼을 위에서부터 4행 1열로 배치 -->
+    <!-- 연산 버튼 4개, layout_margin 추가 -->
     <TableRow>
+
         <Button
             android:id="@+id/BtnAdd"
+            android:layout_margin="5dp"
             android:layout_span="5"
-            android:text="더하기"/>
+            android:text="더하기"
+           />
     </TableRow>
     <TableRow>
+
         <Button
             android:id="@+id/BtnSub"
+            android:layout_margin="5dp"
             android:layout_span="5"
-            android:text="빼기"/>
+            android:text="빼기"
+            />
     </TableRow>
     <TableRow>
         <Button
             android:id="@+id/BtnMul"
             android:layout_span="5"
-            android:text="곱하기"/>
+            android:layout_margin="5dp"
+            android:text="곱하기"
+            />
     </TableRow>
     <TableRow>
         <Button
             android:id="@+id/BtnDiv"
             android:layout_span="5"
+            android:layout_margin="5dp"
             android:text="나누기"/>
     </TableRow>
 
+    <!-- 결과 버튼 -->
+    <TableRow>
+        <Button
+            android:id="@+id/BtnResult"
+            android:layout_span="5"
+            android:layout_margin="5dp"
+            android:text="결과"
+           />
+    </TableRow>
+
+    <!-- 결과를 보여줄 TextView, 색상과 글자 크기 수정 -->
     <TableRow>
         <TextView
             android:id="@+id/TextResult"
+            android:layout_margin="5dp"
             android:layout_span="5"
-            android:text="계산 결과 : "
+            android:text="계산 결과: "
             android:textColor="#FF0000"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textSize="20dp"/>
     </TableRow>
 </TableLayout>
