@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         btnMul = (Button) findViewById(R.id.BtnMul);
         btnDiv = (Button) findViewById(R.id.BtnDiv);
 
-        textResult = (TextView) findViewById(R.id.Result);
+        textResult = (TextView) findViewById(R.id.TextResult);
 
         // 더하기 버튼 이벤트
         btnAdd.setOnTouchListener(new View.OnTouchListener() {
