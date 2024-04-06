@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+    <TableRow>
+        <TextView
+            android:layout_span="5"
+            android:text="202233262 이혜연"
+            android:textSize="12sp" /> <!-- 여기서 textSize를 조절하여 글씨 크기를 조정합니다. -->
+    </TableRow>
 
     <TableRow
         android:layout_weight="1">
