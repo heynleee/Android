@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnAdd, btnSub, btnMul, btnDiv;
     TextView textResult;
     String num1, num2;
-    Integer result;
+    Double result;
     Button[] numButtons = new Button[10];
     Integer[] numBtnIDs = { R.id.BtnNum0, R.id.BtnNum1, R.id.BtnNum2, R.id.BtnNum3,
             R.id.BtnNum4, R.id.BtnNum5, R.id.BtnNum6, R.id.BtnNum7,
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onTouch(View arg0, MotionEvent arg1) {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
-                result = Integer.parseInt(num1) + Integer.parseInt(num2);
+                result = Double.parseDouble(num1) + Double.parseDouble(num2);
                 textResult.setText("계산 결과 : " + result.toString());
                 return false;
             }
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onTouch(View arg0, MotionEvent arg1) {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
-                result = Integer.parseInt(num1) - Integer.parseInt(num2);
+                result = Double.parseDouble(num1) - Double.parseDouble(num2);
                 textResult.setText("계산 결과 : " + result.toString());
                 return false;
             }
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onTouch(View arg0, MotionEvent arg1) {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
-                result = Integer.parseInt(num1) * Integer.parseInt(num2);
+                result = Double.parseDouble(num1) * Double.parseDouble(num2);
                 textResult.setText("계산 결과 : " + result.toString());
                 return false;
             }
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
                 if (!num2.equals("0")) {
-                    result = Integer.parseInt(num1) / Integer.parseInt(num2);
+                    result = Double.parseDouble(num1) / Double.parseDouble(num2);
                     textResult.setText("계산 결과 : " + result.toString());
                 } else {
                     Toast.makeText(getApplicationContext(), "0으로 나눌 수 없습니다.", Toast.LENGTH_SHORT).show();
